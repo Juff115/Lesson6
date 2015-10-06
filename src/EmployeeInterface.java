@@ -47,6 +47,11 @@ public class EmployeeInterface extends javax.swing.JFrame {
         });
 
         btnnew.setText("New Employee");
+        btnnew.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnnewActionPerformed(evt);
+            }
+        });
 
         lblanswer.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblanswer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -139,6 +144,16 @@ public class EmployeeInterface extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, em);
         }
     }//GEN-LAST:event_btnpayActionPerformed
+
+    private void btnnewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnewActionPerformed
+        e=new Employee();
+        txtname.setText(null);
+        txttype.setText(null);
+        txthours.setText(null);
+        txtrate.setText(null);
+        lblanswer.setText(null);
+        
+    }//GEN-LAST:event_btnnewActionPerformed
 
    
     public static void main(String args[]) {
