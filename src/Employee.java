@@ -65,7 +65,7 @@ public class Employee {
     }
     
     public double getPay(){
-        if (type==2) return type*hours;
+        if (type==2) return rate*hours;
         else{
             if (hours<=40) return rate*hours;
             else
