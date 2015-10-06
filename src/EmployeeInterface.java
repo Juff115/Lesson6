@@ -53,7 +53,7 @@ public class EmployeeInterface extends javax.swing.JFrame {
             }
         });
 
-        lblanswer.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblanswer.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblanswer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblanswer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
