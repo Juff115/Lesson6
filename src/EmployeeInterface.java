@@ -28,6 +28,8 @@ public class EmployeeInterface extends javax.swing.JFrame {
         lblanswer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Employee Pay");
+        setResizable(false);
 
         jLabel1.setText("Enter Employee Name:");
 
