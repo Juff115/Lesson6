@@ -8,6 +8,7 @@ public class EmployeeInterface extends javax.swing.JFrame {
     public EmployeeInterface() {
         initComponents();
         e=new Employee();
+        getContentPane().setBackground(new java.awt.Color(0, 0, 240));
         
     }
 
@@ -31,12 +32,16 @@ public class EmployeeInterface extends javax.swing.JFrame {
         setTitle("Employee Pay");
         setResizable(false);
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Enter Employee Name:");
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Enter Type:");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Enter Hours:");
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Enter Rate:");
 
         btnpay.setText("Get Pay");
@@ -54,6 +59,7 @@ public class EmployeeInterface extends javax.swing.JFrame {
         });
 
         lblanswer.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblanswer.setForeground(new java.awt.Color(255, 255, 255));
         lblanswer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblanswer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -121,9 +127,15 @@ public class EmployeeInterface extends javax.swing.JFrame {
         double hr, rt;
         //read name from box store into nm
         nm=txtname.getText();
-        tp= Integer.parseInt(txttype.getText());
-        hr= Double.parseDouble(txthours.getText());
-        rt= Double.parseDouble(txtrate.getText());
+        try{
+            tp= Integer.parseInt(txttype.getText());
+            hr= Double.parseDouble(txthours.getText());
+            rt= Double.parseDouble(txtrate.getText());
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Error you did not enter all data");
+            return;
+        }
         String em="";
         if(e.setName(nm)==false){
             em+="Name "+e.getNameRules()+"\n";
