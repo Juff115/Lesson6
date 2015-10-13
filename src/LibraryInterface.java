@@ -52,7 +52,15 @@ public class LibraryInterface {
             c.println(b4.getTitle() +" could not be borrowed.");
         }
         //return books
-        
+        c.println("-------\nAtempting to return the first book:\n--------------");
+        if (p.returnBook(b1)) c.println(""+b1.getTitle()+" successfully returned.");
+        else    c.println(""+b1.getTitle()+" was not borrowed");
+        c.println("-------\nHere are a list of books currently lent to "+ p.getName()+".\n----");
+        if(p.hasBook(b1)) c.println(""+b1);
+        if(p.hasBook(b2)) c.println(""+b2);
+        if(p.hasBook(b3)) c.println(""+b3);
+        if(p.hasBook(b4)) c.println(""+b4);
+        if(p.hasBook(b5)) c.println(""+b5);
     }
     
 }
