@@ -4,7 +4,8 @@ public class LibraryInterface {
 
     
     public static void main(String[] args) {
-        Console c=new Console();
+        Console c;
+        c =new Console(35,80);
         Book b1, b2, b3, b4, b5;
         b1 = new Book("From Russia With Love","Greg Hines");
         b2 = new Book("Living Smart","Rita Langill");
